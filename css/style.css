@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800);
+body {
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
+h1 {
+  font-size: 48px;
+  font-weight: 400; }
+
+h2 {
+  font-size: 36px;
+  font-weight: 400; }
+
+h3 {
+  font-size: 24px;
+  font-weight: 300; }
+
+header {
+  overflow-x: hidden; }
+  header .background-skew {
+    width: 100%;
+    height: 100vh;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    -o-transform: skew(15deg);
+    background-color: #282828;
+    position: relative;
+    left: -50%; }
+
+section {
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+  top: 0px; }
+  section.left {
+    left: 0px; }
+  section.right {
+    right: 0px; }
+
+.design {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .design .design-heading {
+    /* Offset by 40px; */
+    position: relative;
+    top: -40px;
+    background-color: #fff;
+    z-index: 100; }
+    .design .design-heading h3 {
+      /* Shift slightly to the right */
+      margin-top: 10px;
+      margin-left: 100px; }
+  .design .guidelines {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 10; }
+    .design .guidelines .guideline {
+      /* .design-heading height */
+      /* .design-heading height */
+      font-weight: 300;
+      font-size: 12px; }
+      .design .guidelines .guideline.top {
+        border-left: 1px solid red;
+        height: 50%;
+        position: relative;
+        top: 0px;
+        left: 50%;
+        width: 0px; }
+        .design .guidelines .guideline.top:before {
+          content: '402';
+          display: block;
+          margin-left: -27px;
+          height: 100%;
+          color: red;
+          line-height: 402px; }
+      .design .guidelines .guideline.left {
+        border-bottom: 1px solid red;
+        width: calc(50% - 10px);
+        position: relative;
+        top: -40px;
+        left: -10px; }
+      .design .guidelines .guideline.right {
+        border-bottom: 1px solid red;
+        width: 50%;
+        float: right;
+        position: relative;
+        top: -40px; }
+      .design .guidelines .guideline.bottom {
+        border-left: 1px solid red;
+        height: 50%;
+        position: relative;
+        left: 50%;
+        width: 0px; }
+        .design .guidelines .guideline.bottom:before {
+          content: '483';
+          display: block;
+          margin-left: -27px;
+          height: 100%;
+          color: red;
+          line-height: 483px; }
+
+/*# sourceMappingURL=style.css.map */
