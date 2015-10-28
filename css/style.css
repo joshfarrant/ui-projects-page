@@ -36,6 +36,29 @@ section {
   section.right {
     right: 0px; }
 
+.code .faux-html {
+  font-family: monospace; }
+  .code .faux-html .indent0 {
+    margin-left: 10px; }
+  .code .faux-html .indent1 {
+    margin-left: 20px; }
+  .code .faux-html .indent2 {
+    margin-left: 30px; }
+  .code .faux-html .indent3 {
+    margin-left: 40px; }
+  .code .faux-html .indent4 {
+    margin-left: 50px; }
+  .code .faux-html.monokai {
+    color: #f9f9f3; }
+    .code .faux-html.monokai .tag {
+      color: #f92672; }
+    .code .faux-html.monokai .attr {
+      color: #b3e43b; }
+    .code .faux-html.monokai .string {
+      color: #ebe087; }
+    .code .faux-html.monokai .comment {
+      color: #888471; }
+
 .design {
   display: flex;
   justify-content: center;
