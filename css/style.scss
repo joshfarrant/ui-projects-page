@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800);
+@import url(https://cdn.jsdelivr.net/font-hack/2.015/css/hack.min.css);
 @import "variables";
 
 body {
@@ -13,15 +14,18 @@ header {
 
   overflow-x: hidden;
 
+  background-color: $off-black;
+
   .background-skew {
     width: 100%;
     height: 100vh;
     -webkit-transform: $skew;
     -moz-transform: $skew;
     -o-transform: $skew;
-    background-color: $off-black;
+    background-color: #fff;
     position: relative;
-    left: -50%;
+    left: 50%;
+    z-index: 5;
   }
 
 }
@@ -46,37 +50,46 @@ section {
 
   .faux-html {
 
-    font-family: monospace;
+    $code-font-size: 18px;
+    /* Character width is 11px at 18px font */
+    $code-character-width: $code-font-size * 0.6111111111;
+
+    font-family: "Hack", monospace;
+    font-size: $code-font-size;
+    line-height: 1.2;
+
+    white-space: nowrap;
 
     .indent0 {
-      margin-left: 10px;
+      margin-left: 0px;
     }
     .indent1 {
-      margin-left: 20px;
+      margin-left: $code-character-width * 2;
     }
     .indent2 {
-      margin-left: 30px;
+      margin-left: $code-character-width * 4;
     }
     .indent3 {
-      margin-left: 40px;
+      margin-left: $code-character-width * 6;
     }
     .indent4 {
-      margin-left: 50px;
+      margin-left: $code-character-width * 8;
     }
 
-    &.monokai {
-      color: #f9f9f3;
-      .tag {
-        color: #f92672;
-      }
-      .attr {
-        color: #b3e43b;
-      }
-      .string {
-        color: #ebe087;
-      }
-      .comment {
-        color: #888471;
+    /* Build code theme styles */
+    @each $map-name, $map in $code-themes {
+      /* Iterate over maps within $code-themes map */
+      &.#{$map-name} {
+        /* Create a class for that map eg. monokai */
+
+        /* Get the main color from the map */
+        color: map-get($map, "main");
+        @each $property, $color in $map {
+          /* Iterate over the theme map setting the correct color for each property */
+          .#{$property} {
+            color: $color;
+          }
+        }
       }
     }
 

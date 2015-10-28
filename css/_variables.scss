@@ -1,3 +1,46 @@
 $off-black: #282828;
 $skew: skew(15deg);
 $guideline-border: 1px solid red;
+
+$code-themes: (
+  monokai: (
+    background: #282828,
+    main: #f9f9f3,
+    tag: #f92672,
+    class: #A6E22E,
+    string: #ebe087,
+    comment: #888471
+  ),
+  batman: (
+    background: #313437,
+    main: #a0a0a0,
+    tag: #738c73,
+    class: #f8f8f0,
+    string: #79afa9,
+    comment: #666666
+  ),
+  tomorrow: (
+    background: #1d1f21,
+    main: #c5c8c6,
+    tag: #cc6666,
+    class: #f0c674,
+    string: #b5bd68,
+    comment: #969896
+  ),
+  solarized: (
+    background: #002b36,
+    main: #657b83,
+    tag: #268bd2,
+    class: #d33682,
+    string: #2aa198,
+    comment: #586e75
+  ),
+  dracula: (
+    background: #282a36,
+    main: #f8f8f2,
+    tag: #ff79c6,
+    class: #66d9ef,
+    string: #f1fa8c,
+    comment: #6272a4
+  )
+)
